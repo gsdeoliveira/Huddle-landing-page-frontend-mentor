@@ -1,0 +1,176 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+*,
+*:after,
+*:before {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+font-size: 1.6rem;
+}
+
+body, html {
+font-size: 62.5%;
+font-family: 'Open Sans', sans-serif;
+background-color: var(--Violet);
+}
+
+body {
+max-width: 144rem;
+margin: 0 auto;
+}
+
+.container {
+  background: url('../images/bg-desktop.svg') var(--Violet) no-repeat;
+
+}
+
+header {
+  padding: 5rem 7rem;
+}
+
+header img {
+  width: 26.4rem;
+}
+
+main {
+  display: flex;
+  padding: 3rem 7rem;
+}
+
+main div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main div img {
+  width: 100%;
+}
+
+main .text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  gap: 3rem;
+  color: white;
+}
+
+main .text-container h1 { 
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+}
+
+main .text-container p {
+  line-height: 1.5;
+}
+
+main .text-container button {
+  color: var(--Violet);
+  width: 10em;
+  padding: 2rem 4rem;
+  border: none;
+  border-radius: 5rem;
+  -webkit-box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
+  letter-spacing: .1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+main .text-container button:hover {
+  background-color: var(--SoftMagenta);
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  padding: 0 7rem 2rem 7rem;
+  gap: 1.5rem;
+}
+
+footer i {
+  color: white;
+  padding: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding-right: 2.5rem;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+footer i:hover {
+  color: var(--SoftMagenta);
+  border-color: var(--SoftMagenta);
+}
+
+.fa-brands.fa-facebook-f.fa-fw::before {
+  margin-left: .2rem;
+}
+.fa-brands.fa-facebook-f.fa-fw::before,
+.fa-brands.fa-twitter.fa-fw::before,
+.fa-brands.fa-instagram.fa-fw::before {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 1200px) {
+  main .text-container {
+    padding: 3rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  html, body {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    background: url('../images/bg-mobile.svg') var(--Violet) no-repeat;
+    background-size: contain;
+  }
+  header {
+    padding: 2rem 3rem;
+  }
+  header img {
+    width: 20rem;
+  }
+  main {
+    flex-direction: column;
+    padding: 2rem 3rem;
+  }
+
+  main div {
+    width: 100%;
+  }
+
+  main .text-container {
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  main .text-container button {
+    width: 60%;
+  }
+
+  footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  main .text-container h1 {
+    font-size: 3rem;
+  }
+}
